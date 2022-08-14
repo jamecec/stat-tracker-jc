@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+body{
+  font-family: 'Quicksand', sans-serif;
+  margin:0 50px;
+  padding:0;
+  height: 120vh;
+  --red: rgba(  189, 27, 8 ,.8);
+  --purple: rgba(  25, 6, 80 ,.8);
+  --gray: rgba( 79, 72, 72,.8);
+  background: linear-gradient(217deg, var(--purple), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, var(--red), rgba(0,255,0,0) 70.71%),
+            linear-gradient(336deg, var(--gray), rgba(0,0,255,0) 70.71%);;
+  color: white;
+}
+.layout{
+  display: flex;
+  flex-direction: row;
+}
+.new-user, .graph-options{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 25px;
+  margin: 30px 15px;
+}
+label{
+  width: 100%;
+}
+.username{
+  margin-right: 15px;
+}
+h1{
+  margin-bottom: 25px;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid black;
+  padding: 5px;
+  font-size: clamp(1rem, 1rem + 2vw, 5rem);
+}
+.recordStats{
+  margin: 30px 15px;
+}
+Button,.recButton, .new-user input[type=submit]{
+  margin-top: 25px;
+  padding: 2px 19px;
+  background-color: var(--red);
+  border-radius: 3px;
+  border: 1px black solid;
+  color: white;
+}
+Button:hover,.recButton:hover, .new-user input[type=submit]:hover{
+  background-color: var(--purple);
+}
+form, .goals{
+  border: 1px solid black;
+  width: 20vw;
+  margin: 0 10px;
+  overflow-wrap: break-word;
+}
+input[type=text]{
+  width: 100%;
+}
+.goals p{
+  margin-left: 15px;
+}
+.goals input{
+  margin-left: 15px;
+}
+.goals button{
+  margin-left: 15px;
+  margin-bottom: 15px;
+}
+.graph-column{
+  margin-left: 4vw
+}
+.graph-options p, label, select{
+  margin: 0 20px;
+}
+.graphButton, .new-user input[type=submit]{
+  margin: 0 10px;
+}
+.accordion-title{
+  display: flex;
+  align-items: center;
+  width: 18vw;
+  height: 40px;
+  background-color: var(--red);
+  margin-left: .5vw;
+  margin-top: 20px;
+  border: 1px solid black;
+  padding: 0 1vw;
+}
+.accordion-title:hover{
+  background-color:   var(--purple);
+}
+.icon{
+  display: block;
+  margin-left: auto;
+}
+.goals{
+  display: flex;
+  flex-direction: row;
+}
+.dmg{
+  color: var(--red);
+}
+.kills{
+  color: var(--purple);
+}
+.progress-bars{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 3vw;
+  margin-bottom: 1.5rem;
+}
+.bar{
+  stroke: black;
+  fill: var(--red)
+}
+.bar:hover{
+  fill: var(--purple)
+}
+#tooltip{
+  background-color: white;
+  color: black;
+  border-radius: 2px;
+  width: 300px;
+  position: absolute;
+}
+.axis-label{
+  fill: white;
+}
+.examples{
+  color: white;
+  text-decoration: underline;
+  text-decoration-color: var(--red);
+  cursor: pointer;
+  font-size: 14px;
+}
+.examples:hover{
+  text-decoration-color: var(--purple);
+}
+
+@media(max-width: 80em){
+  .layout{
+    flex-direction: column;
+    align-items: center;
+  }
+  .new-user{
+    flex-direction: column;
+    height: auto;
+  }
+  input[type=submit]{
+    margin-top: 1em !important;
+  }
+  .graph-selector{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .graph-options{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+  }
+  form, .goals{
+    width: 60vw !important;
+  }
+  .progress-bars{
+    height: 50vh;
+  }
+  .accordion-title{
+    width: 58vw;
+    margin: .1em auto 0 auto;
+  }
+  .goals{
+    flex-direction: column;
+  }
+.goals input[type=text]{
+  width: 80%;
+}
+.graph-display{
+  margin-top: 18em;
+}
+
+}
