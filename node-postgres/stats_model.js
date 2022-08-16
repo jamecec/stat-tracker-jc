@@ -1,7 +1,8 @@
 require('dotenv').config()
 const Pool = require('pg').Pool;
 const proConfig = {
-  connectionString: process.env.DATABASE_URL
+  connectionString: process.env.DATABASE_URL,
+  ssl: { rejectUnauthorized: false }
 }
 const devConfig = {
   user: process.env.PGUSER,
