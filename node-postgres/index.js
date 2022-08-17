@@ -10,7 +10,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
-const listener = app.listen(process.env.port || 5000, ()=>{
+const listener = app.listen(process.env.PORT || 5000, ()=>{
   console.log('App is running on Port ' + listener.address().port)
 });
 
