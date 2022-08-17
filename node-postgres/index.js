@@ -10,6 +10,10 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors());
 
+const listener = app.listen(process.env.port || 5000, ()=>{
+  console.log('App is running on Port ' + listener.address().port)
+});
+
 app.get('/', (req, res) => res.send('Hello from Express!'));
 
 app.post('/api/users', (req,res)=> {
@@ -42,8 +46,4 @@ app.get('/api/stats/:id', (req,res)=>{
   .catch(error => {
     res.status(500).send(JSON.stringify("Invalid Id"));
   })
-});
-
-const listener = app.listen(process.env.port || 5000, ()=>{
-  console.log('App is running on Port ' + listener.address().port)
 });
