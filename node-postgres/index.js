@@ -9,7 +9,7 @@ app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cors({
-  origin: "https://stat-tracker-jc.netlify.app",
+  origin: ["https://stat-tracker-jc.netlify.app"],
   credentials: true
 }));
 
