@@ -19,7 +19,7 @@ export default function GraphForm(){
       setGraphStatus("Please Make a Selection")
     }
     else{
-   fetch(`http://localhost:5000/api/stats/${graphId}`)
+   fetch(`https://git.heroku.com/stat-tracker-jc.git/api/stats/${graphId}`)
    .then(response => response.json())
    .then(data => setGraphResponse(data));
    setGraphStatus();
