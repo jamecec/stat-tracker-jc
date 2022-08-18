@@ -8,7 +8,10 @@ var bodyParser = require("body-parser");
 app.use(express.json());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cors());
+app.use(cors({
+  origin: "https://stat-tracker-jc.netlify.app",
+  credentials: true
+}));
 
 const listener = app.listen(process.env.PORT || 5000, ()=>{
   console.log('App is running on Port ' + listener.address().port)
