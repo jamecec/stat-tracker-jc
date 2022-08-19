@@ -27,11 +27,11 @@ export default function GraphForm(){
  };
 
 function example1(){
-  setGraphId(33);
+  setGraphId(1);
   setGameFilter("Apex Legends");
 }
 function example2(){
-  setGraphId(33);
+  setGraphId(1);
   setGameFilter("Overwatch");
 }
 

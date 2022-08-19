@@ -33,13 +33,13 @@ export default function GoalForm(){
 }
  };
     function example1(){
-      setGoalId(33);
+      setGoalId(1);
       setGoalGame("Apex Legends");
       setGoalDmg(3000);
       setGoalKills(6);
     }
     function example2(){
-      setGoalId(33);
+      setGoalId(1);
       setGoalGame("Overwatch");
       setGoalDmg(8000);
       setGoalKills(20);
