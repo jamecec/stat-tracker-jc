@@ -32,7 +32,7 @@ export default function StatForm(){
       setStatStatus("ID and Game are required fields")
     }
     else{
-   fetch(`https://git.heroku.com/stat-tracker-jc.git/api/stats/${statId}`, {
+   fetch(`https://stat-tracker-jc.herokuapp.com/api/stats/${statId}`, {
      method: 'post',
      headers: {'Content-Type': 'application/json'},
      body: JSON.stringify({

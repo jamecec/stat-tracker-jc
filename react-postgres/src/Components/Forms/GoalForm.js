@@ -26,7 +26,7 @@ export default function GoalForm(){
       setGoalStatus("Please Input your Goals")
     }
     else{
-   fetch(`https://git.heroku.com/stat-tracker-jc.git/api/stats/${goalId}`)
+   fetch(`https://stat-tracker-jc.herokuapp.com/api/stats/${goalId}`)
    .then(response=>response.json())
    .then(data=> setGoalResponse(JSON.parse(data)))
    setGoalStatus()

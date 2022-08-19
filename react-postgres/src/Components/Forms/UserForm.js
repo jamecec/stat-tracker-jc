@@ -8,7 +8,7 @@ export default function UserForm(){
 
   let handleUserSubmit = (e) => {
     e.preventDefault();
-     fetch('https://git.heroku.com/stat-tracker-jc.git/api/users', {
+     fetch('https://stat-tracker-jc.herokuapp.com/api/users', {
        method: 'post',
        headers: {'Content-Type': 'application/json'},
        body: JSON.stringify({
