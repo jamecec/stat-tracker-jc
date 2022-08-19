@@ -1,17 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
-
+html{
+  min-height: 100%;
+}
 body{
   font-family: 'Quicksand', sans-serif;
   margin:0 50px;
   padding:0;
-  height: 120vh;
-  --red: rgba(  189, 27, 8 ,.8);
-  --purple: rgba(  25, 6, 80 ,.8);
-  --gray: rgba( 79, 72, 72,.8);
+  --red: rgba(189, 27, 8 ,.8);
+  --purple: rgba(25, 6, 80 ,.8);
+  --gray: rgba(79, 72, 72,.8);
   background: linear-gradient(217deg, var(--purple), rgba(255,0,0,0) 70.71%),
             linear-gradient(127deg, var(--red), rgba(0,255,0,0) 70.71%),
             linear-gradient(336deg, var(--gray), rgba(0,0,255,0) 70.71%);;
   color: white;
+  height: 100%;
 }
 .layout{
   display: flex;
